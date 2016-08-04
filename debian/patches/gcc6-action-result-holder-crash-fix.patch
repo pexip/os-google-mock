@@ -1,0 +1,33 @@
+Author: Romain Geissler
+Origin: https://github.com/google/googletest/issues/705#issuecomment-235067917
+Bug-Ubuntu: https://bugs.launchpad.net/ubuntu/+source/google-mock/+bug/1609793
+
+--- google-mock-1.7.0-18092013.orig/include/gmock/gmock-spec-builders.h
++++ google-mock-1.7.0-18092013/include/gmock/gmock-spec-builders.h
+@@ -1370,6 +1370,8 @@ class ActionResultHolder : public Untype
+ template <>
+ class ActionResultHolder<void> : public UntypedActionResultHolderBase {
+  public:
++  explicit ActionResultHolder() {}
++
+   void GetValueAndDelete() const { delete this; }
+ 
+   virtual void PrintAsActionResult(::std::ostream* /* os */) const {}
+@@ -1381,7 +1383,7 @@ class ActionResultHolder<void> : public
+       const typename Function<F>::ArgumentTuple& args,
+       const string& call_description) {
+     func_mocker->PerformDefaultAction(args, call_description);
+-    return NULL;
++    return new ActionResultHolder();
+   }
+ 
+   // Performs the given action and returns NULL.
+@@ -1390,7 +1392,7 @@ class ActionResultHolder<void> : public
+       const Action<F>& action,
+       const typename Function<F>::ArgumentTuple& args) {
+     action.Perform(args);
+-    return NULL;
++    return new ActionResultHolder();
+   }
+ };
+ 
