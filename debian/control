@@ -3,7 +3,7 @@ Section: devel
 Priority: optional
 Maintainer: Pexip AS <packaging@pexip.com>
 XSBC-Pexip-Original-Maintainer: Fredrik Hallenberg <hallon@debian.org>
-Build-Depends: debhelper (>= 9), autotools-dev, libgtest-dev (>= 1.6.0)
+Build-Depends: debhelper (>= 9), autotools-dev, libgtest-dev (>= 1.6.0), python2.7
 Standards-Version: 3.9.8
 Homepage: https://github.com/google/googletest/tree/master/googlemock
 XS-Pexip-Upstream: http://ftp.debian.org/debian/ stretch

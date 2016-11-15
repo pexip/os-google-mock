@@ -1,6 +1,7 @@
 google-mock (1.7.0-18092013-2.1pexip1) pexip; urgency=low
 
   * Prepare Pexip packaging
+  * debian/control: require python2.7
 
  -- John-Mark Bell <jmb@pexip.com>  Tue, 15 Nov 2016 09:30:04 +0000
 
