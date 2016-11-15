@@ -1,3 +1,9 @@
+google-mock (1.7.0-18092013-2.1pexip1) pexip; urgency=low
+
+  * Prepare Pexip packaging
+
+ -- John-Mark Bell <jmb@pexip.com>  Tue, 15 Nov 2016 09:30:04 +0000
+
 google-mock (1.7.0-18092013-2.1) unstable; urgency=medium
 
   * Non-maintainer upload.

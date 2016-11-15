@@ -1,10 +1,12 @@
 Source: google-mock
 Section: devel
 Priority: optional
-Maintainer: Fredrik Hallenberg <hallon@debian.org>
+Maintainer: Pexip AS <packaging@pexip.com>
+XSBC-Pexip-Original-Maintainer: Fredrik Hallenberg <hallon@debian.org>
 Build-Depends: debhelper (>= 9), autotools-dev, libgtest-dev (>= 1.6.0)
 Standards-Version: 3.9.8
 Homepage: https://github.com/google/googletest/tree/master/googlemock
+XS-Pexip-Upstream: http://ftp.debian.org/debian/ stretch
 
 Package: google-mock
 Architecture: any
